@@ -20,7 +20,6 @@ class Station
 	end
 
 	def touch_on(passenger)
-		raise "Not enough money" if passenger_purse <= 2
 		@passengers << passenger
 	end
 
