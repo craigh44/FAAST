@@ -1,5 +1,6 @@
 require_relative "passenger_holder"
 
+
 class Station
 
 	include PassengerHolder
@@ -22,5 +23,8 @@ class Station
 	def depart(train)
 		@trains.delete(train)
 	end
+
+
+
 	
 end
