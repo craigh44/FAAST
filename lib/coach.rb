@@ -4,7 +4,8 @@ class Coach
 
 	include PassengerHolder
 
-	def initialize
+	def initialize(options = {})
+		self.capacity = options.fetch(:capacity, capacity)
 		@passengers = []
 	end
 end 
