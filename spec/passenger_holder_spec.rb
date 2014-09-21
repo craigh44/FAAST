@@ -17,10 +17,4 @@ it "should be able to accept and release passengers" do
 end
 
 	
-
-
-
-
-
-
 end
