@@ -1,0 +1,12 @@
+
+
+describe Passenger do 
+
+
+
+
+
+
+
+
+end
