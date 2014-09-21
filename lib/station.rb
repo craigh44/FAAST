@@ -3,6 +3,7 @@ class Station
 
 	def initialize
 		@trains = []
+		@passengers = []
 	end
 	
 	def arrive(train)
@@ -18,6 +19,19 @@ class Station
 		@trains.delete(train)
 	end
 
-	
+	def touch_on(passenger)
+		raise "Not enough money" if passenger_purse <= 2
+		@passengers << passenger
+	end
 
+	def touch_off(passenger)
+		@passengers.delete(passenger)
+	end
+
+	def passenger_count
+		@passengers.count
+	end
+
+
+	
 end
