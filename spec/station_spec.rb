@@ -6,6 +6,7 @@ describe Station do
 
 	let (:station) {Station.new}
 	let (:train) {Train.new}
+	let(:passenger) {Passenger.new}
 	
 	it "should be empty after we create it" do
 		expect(station.train_count).to eq(0)
@@ -22,4 +23,10 @@ describe Station do
 		station.arrive(train)
 		expect { station.arrive(train) }.to raise_error("Already a train in station")
 	end
+
+#	it "should not let passengers onto station if balance less than 2" do
+#		expect{station.accept(passenger)}.to raise_error("Not enough funds")
+#	end
+
+
 end
