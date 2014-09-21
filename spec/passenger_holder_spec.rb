@@ -9,10 +9,15 @@ let(:holder) {PersonHolder.new}
 let(:passenger) {Passenger.new}
 
 
-it "should be able to accept passengers" do 
+it "should be able to accept and release passengers" do 
 	holder.accept(passenger)
 	expect(holder.passenger_count).to eq(1)
+	holder.release(passenger)
+	expect(holder.passenger_count).to eq(0)
 end
+
+	
+
 
 
 
