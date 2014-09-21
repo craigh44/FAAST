@@ -1,5 +1,5 @@
 class Passenger
 
 	
-	end
+
 end

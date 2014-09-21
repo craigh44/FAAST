@@ -7,7 +7,7 @@ module PassengerHolder
 	def accept(passenger)
 
 		@passengers << passenger
-	end 
+	end	 
 
 	def release(passenger)
 		@passengers.delete(passenger)
