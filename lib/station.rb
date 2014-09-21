@@ -1,4 +1,8 @@
+require_relative "passenger_holder"
+
 class Station
+
+	include PassengerHolder
 
 
 	def initialize
@@ -18,19 +22,5 @@ class Station
 	def depart(train)
 		@trains.delete(train)
 	end
-
-	def touch_on(passenger)
-		@passengers << passenger
-	end
-
-	def touch_off(passenger)
-		@passengers.delete(passenger)
-	end
-
-	def passenger_count
-		@passengers.count
-	end
-
-
 	
 end
