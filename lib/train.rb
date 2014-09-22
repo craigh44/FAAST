@@ -1,3 +1,5 @@
+require_relative 'coach'
+
 class Train
 
 	def initialize

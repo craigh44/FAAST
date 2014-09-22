@@ -1,21 +1,22 @@
 class Passenger
 
-DEFAULT_BALANCE = 10
-
-	def initialize(options = {})
-		self.balance = options.fetch(:balance, balance)
-		@balance = []
+	def initialize 
+		@balance = 10
 	end
 
 	def balance
-		@balance = DEFAULT_BALANCE
-	end
-
-	def balance=(value)
-		@balance = value
+		@balance 
 	end
 
 	def balance_count
 		@balance.count
 	end
+
+	 def touch_in
+	 	raise "No funds" if self.balance <= 2
+	 	@balance -= 2
+	 end
+
+
 end
+
