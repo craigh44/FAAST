@@ -12,21 +12,18 @@ describe Station do
 		expect(station.train_count).to eq(0)
 	end
 
-	it "Should let trains arrive & depart station" do 
+	it "Should let trains arrive into station" do 
+		expect{station.arrive(train)}.to change{station.train_count}.by 1
+	end
+
+	it "Should let trains depart from station" do 
 		station.arrive(train)
-		expect(station.train_count).to eq(1)
-		station.depart(train)
-		expect(station.train_count).to eq(0)
+		expect{station.depart(train)}.to change{station.train_count}.by -1
 	end
 
 	it "should only hold 1 train" do
 		station.arrive(train)
 		expect { station.arrive(train) }.to raise_error("Already a train in station")
 	end
-
-#	it "should not let passengers onto station if balance less than 2" do
-#		expect{station.accept(passenger)}.to raise_error("Not enough funds")
-#	end
-
 
 end
