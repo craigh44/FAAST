@@ -1,10 +1,8 @@
 require_relative "passenger_holder"
 
-
 class Station
 
 	include PassengerHolder
-
 
 	def initialize
 		@trains = []

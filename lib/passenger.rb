@@ -12,9 +12,10 @@ class Passenger
 		@balance.count
 	end
 
-	 def touch_in
+	 def touch_in(station)
 	 	raise "No funds" if self.balance <= 2
 	 	@balance -= 2
+	 	
 	 end
 
 

@@ -3,7 +3,7 @@ require_relative 'coach'
 class Train
 
 	def initialize
-		@coaches = [Coach.new,Coach.new,Coach.new,Coach.new	]
+		@coaches = [coach1 = Coach.new, coach2 = Coach.new, coach3 = Coach.new,coach4 = Coach.new	]
 	end
 
  	def coach_count

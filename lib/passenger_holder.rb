@@ -1,6 +1,6 @@
 module PassengerHolder
 
-	DEFAULT_CAPACITY = 10
+	DEFAULT_CAPACITY = 40
 
 	def capacity
 		@capacity ||= DEFAULT_CAPACITY
@@ -14,9 +14,14 @@ module PassengerHolder
 		@passengers = []
 	end
 
-	def accept(passenger)
+	def add(passenger)
+		@passengers << passenger
+	end
+
+	def accept(passenger, place)
 		raise "Coach is full" if full?
 		@passengers << passenger
+		place.release(passenger)
 	end	 
 
 	def release(passenger)

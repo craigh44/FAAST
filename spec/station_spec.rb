@@ -25,5 +25,4 @@ describe Station do
 		station.arrive(train)
 		expect { station.arrive(train) }.to raise_error("Already a train in station")
 	end
-
 end
