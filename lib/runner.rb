@@ -1,0 +1,5 @@
+require "./coach.rb"
+require "./passenger_holder.rb"
+require "./passenger.rb"
+require "./station.rb"
+require "./train.rb"
